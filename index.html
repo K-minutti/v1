@@ -4,35 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="style.css" />
     <title>Kevin Minutti</title>
   </head>
   <nav class="navbar fixed-top navbar-expand-lg">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-toggle="collapse"
-      data-target="#navbarNavAltMarkup"
-      aria-controls="navbarNavAltMarkup"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    <a class="navbar-brand" href=""><strong id="logo">KM</strong></a>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-item nav-link active" href="#"
-          >Home <span class="sr-only">(current)</span></a
-        >
-        <a class="nav-item nav-link" href="#">Features</a>
-        <a class="nav-item nav-link" href="#">Pricing</a>
+        <a class="nav-item nav-link" href="/bio.html">Bio</a>
+        <a class="nav-item nav-link" href="#">Projects</a>
+        <a class="nav-item nav-link" href="#">Contact</a>
       </div>
     </div>
   </nav>
@@ -43,20 +30,12 @@
     <script src="index.js"></script>
 
     <div class="container-fluid fixed-top header disable-selection">
-      <div class="row">
-        <div class="col"></div>
-        <div class="col-md-6">
-          <div class="row">
-            <div class="col">
-              <h1><strong>Flower Shader</strong></h1>
-              <p href="#" role="button" onclick="cameraSet()">
-                – Perlin Noise Setup –
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col"></div>
-      </div>
+      <p href="#" role="button" onclick="cameraSet()"></p>
+    </div>
+    <div class="center-div">
+      <h1 id="center-text">
+        <strong>Kevin Minutti. Software Engineer.</strong>
+      </h1>
     </div>
     <script id="vertexShader" type="x-shader/x-vertex">
       //

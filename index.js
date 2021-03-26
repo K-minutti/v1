@@ -3,9 +3,9 @@ window.addEventListener("load", init, false);
 function init() {
   createWorld();
   createLights();
-  //createGrid();
+  // createGrid();
   createPrimitive();
-  // createGUI();
+  createGUI();
   //---
   animation();
 }
