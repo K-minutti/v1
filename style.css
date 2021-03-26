@@ -12,8 +12,8 @@ canvas {
 p {
   color: rgba(255, 255, 255, 0.5);
 }
-.header {
-  top: 45%;
+nav {
+  margin: 32px;
 }
 .footer {
   bottom: 3%;

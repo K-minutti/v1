@@ -5,7 +5,7 @@ function init() {
   createLights();
   //createGrid();
   createPrimitive();
-  createGUI();
+  // createGUI();
   //---
   animation();
 }
