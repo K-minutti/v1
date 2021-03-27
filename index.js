@@ -5,7 +5,7 @@ function init() {
   createLights();
   // createGrid();
   createPrimitive();
-  createGUI();
+  // createGUI();
   //---
   animation();
 }
@@ -103,24 +103,24 @@ var uniforms = {
   },
 };
 
-var speedRandom = Math.random(10) / 10000;
+var speedRandom = Math.random(18) / 10000;
 
 var options = {
   perlin: {
     vel: 0.002,
     speed: speedRandom,
     perlins: 1.0,
-    decay: 0.4,
+    decay: 0.45,
     complex: 0.0,
     waves: 10.0,
-    eqcolor: 11.0,
+    eqcolor: 8.0,
     fragment: false,
     redhell: true,
   },
   rgb: {
-    r_color: 6.0,
-    g_color: 0.0,
-    b_color: 0.2,
+    r_color: 8.4,
+    g_color: 9.0,
+    b_color: 6.07,
   },
   cam: {
     zoom: 10,
