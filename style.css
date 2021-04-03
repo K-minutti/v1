@@ -127,14 +127,14 @@ a:visited {
 
 .project-card {
   width: 90%;
-  margin-top: 32px;
-  border: 3px slateblue dotted;
+  margin-top: 48px;
+  margin-bottom: 48px;
 }
 
 .project-image-container {
   width: 65%;
-
-  border: 2px solid yellowgreen;
+  border-radius: 8px;
+  /* border: 2px solid white; */
   margin: auto;
 }
 
@@ -154,19 +154,7 @@ img {
   background-color: rgba(240, 238, 255, 0.1);
 }
 
-/* Slideshow container */
-/* Slideshow container */
-/* Slideshow container */
-.slideshow-container {
-  position: relative;
-  margin: auto;
-}
-
-/* Hide the images by default */
-/* .mySlides {
-  display: none;
-} */
-
+/* image slides*/
 /* Next & previous buttons */
 .prev,
 .next {
@@ -195,8 +183,8 @@ img {
 /* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
-  height: 8px;
-  width: 8px;
+  height: 6px;
+  width: 6px;
   margin: 0 2px;
   background-color: #bbb;
   border-radius: 50%;
@@ -220,28 +208,54 @@ img {
   display: block;
 }
 
-/* Fading animation */
-/* .fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
+.fade-in {
+  animation: fadeIn ease 3s;
+  -webkit-animation: fadeIn ease 3s;
+  -moz-animation: fadeIn ease 3s;
+  -o-animation: fadeIn ease 3s;
+  -ms-animation: fadeIn ease 3s;
 }
-
-@-webkit-keyframes fade {
-  from {
-    opacity: 0.4;
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
   }
-  to {
+  100% {
     opacity: 1;
   }
 }
 
-@keyframes fade {
-  from {
-    opacity: 0.4;
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
   }
-  to {
+  100% {
     opacity: 1;
   }
-} */
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
