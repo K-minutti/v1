@@ -41,23 +41,31 @@
       <!--SECOND PROJECT -->
       <div class="project-card row">
         <div class="project-image-container">
-          <div class="image show">
-            <div class="numbertext">3 / 3</div>
+          <div class="image-1 show">
             <!-- <img src="./assets/aiki.png" style="width: 100%" /> -->
-            <img src="./assets/aiki.png" />
+            <img src="./assets/aiki.png" style="max-width: 100%" />
+          </div>
+          <div class="image-1">
+            <!-- <img src="./assets/aiki.png" style="width: 100%" /> -->
+            <img src="./assets/tc.png" style="max-width: 100%" />
+          </div>
+          <div class="image-1">
+            <!-- <img src="./assets/aiki.png" style="width: 100%" /> -->
+            <img src="./assets/bio.jpeg" style="max-width: 100%" />
           </div>
 
           <!-- Next and previous buttons -->
           <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
           <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
-          <a class="prev" onclick="plusSlides(-1)">prev</a>
-          <a class="next" onclick="plusSlides(1)">next</a>
+
+          <a class="prev" onclick="plusSlides(1, -1)">prev</a>
+          <a class="next" onclick="plusSlides(1, 1)">next</a>
 
           <!-- The dots/circles -->
           <div style="text-align: center">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot dot-1 active"></span>
+            <span class="dot dot-1"></span>
+            <span class="dot dot-1"></span>
           </div>
         </div>
 
