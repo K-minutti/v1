@@ -4,6 +4,9 @@ body {
   text-align: center;
   background-color: black;
 }
+html {
+  scroll-behavior: smooth;
+}
 canvas {
   display: block;
   width: 100%;
@@ -11,6 +14,19 @@ canvas {
 }
 nav {
   color: white;
+  height: 80px;
+  /* line-height: 80px
+  box-shadow: 1px 1px 1px rgba(0, 0,0, 0.2) */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9998;
+  transition: all 0.5s;
+}
+
+.scrollUp {
+  transform: translateY(-80px);
 }
 
 #logo {
@@ -124,7 +140,12 @@ a:visited {
 }
 
 .banner {
-  height: 300px;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .projects-container {
@@ -133,15 +154,13 @@ a:visited {
   flex-direction: column;
   text-align: center;
   align-items: center;
-  padding: 20px 0px;
-  border: 2px dotted orange;
+  padding: 6rem 0rem 2rem 0rem;
 }
 
 .project-card {
   width: 85%;
-  height: 520px;
-  margin-top: 48px;
-  margin-bottom: 48px;
+  height: 500px;
+  margin: 72px 0px;
 }
 
 img {
@@ -360,5 +379,31 @@ img {
   }
   100% {
     opacity: 1;
+  }
+}
+
+.bounce {
+  -moz-animation: bounce 3s infinite;
+  -webkit-animation: bounce 3s infinite;
+  animation: bounce 3s infinite;
+}
+
+.bounce:hover {
+  color: rgba(0, 0, 255, 1);
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-15px);
   }
 }

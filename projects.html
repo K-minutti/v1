@@ -16,6 +16,7 @@
       integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
       crossorigin="anonymous"
     />
+
     <link rel="stylesheet" href="style.css" />
     <title>Kevin Minutti</title>
   </head>
@@ -35,15 +36,14 @@
   </nav>
 
   <body>
-    <div class="banner"></div>
-    <div>
-      <div class="title">
-        <h2>Projects</h2>
-      </div>
-      <span>DOWN ARROW SQUARE</span>
+    <div class="banner">
+      <h1 style="font-size: 80px; margin-bottom: 20px">Projects</h1>
+      <a href="#projects" class="bounce"
+        ><i class="fas fa-arrow-circle-down" style="font-size: 48px"></i
+      ></a>
     </div>
 
-    <div class="projects-container">
+    <div id="projects" class="projects-container">
       <!--FIRST PROJECT -->
       <div class="project-card row">
         <div class="project-image-container">
@@ -98,8 +98,8 @@
               </div>
               <div style="border-top: 1px solid rgba(183, 183, 183, 0.3)"></div>
               <div class="stack-links-inner">
-                <a><i class="fas fa-globe-americas"></i></a>
-                <a><i class="fab fa-github"></i></a>
+                <a><i class="fas fa-globe-americas"></i>Project</a>
+                <a><i class="fab fa-github"></i>Github Repo</a>
               </div>
             </div>
           </div>
@@ -164,7 +164,69 @@
           </div>
         </div>
       </div>
+      <!--THIRD PROJECT -->
+      <div class="project-card row">
+        <div class="project-image-container">
+          <div class="image-container-left">
+            <div class="image-1 show fade-in">
+              <!-- <img src="./assets/aiki.png" style="width: 100%" /> -->
+              <img src="./assets/aiki.png" style="max-width: 100%" />
+            </div>
+            <div class="image-1 fade-in">
+              <!-- <img src="./assets/aiki.png" style="width: 100%" /> -->
+              <img src="./assets/tc.png" style="max-width: 100%" />
+            </div>
+            <div class="image-1 fade-in">
+              <!-- <img src="./assets/aiki.png" style="width: 100%" /> -->
+              <img src="./assets/bio.jpeg" style="max-width: 100%" />
+            </div>
+
+            <div class="image-changers">
+              <a class="prev" onclick="plusSlides(1, -1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+            </div>
+
+            <!-- The dots/circles -->
+            <div class="dot-container" style="text-align: center">
+              <span class="dot dot-1 active"></span>
+              <span class="dot dot-1"></span>
+              <span class="dot dot-1"></span>
+            </div>
+          </div>
+        </div>
+
+        <section class="project-desc-container">
+          <div class="project-desc">
+            <div class="project-title-container project-center">
+              <h4>Stockgraph</h4>
+            </div>
+            <div class="project-main-text project-center">
+              <p style="padding: 0px 14px; line-height: 160%">
+                A web app that allows users to search for stock symbols or
+                import an imaginary portfolio of stocks to receive buy and sell
+                recommendations and explore visualizations of historical stock
+                data analyses and daily market metrics.
+              </p>
+            </div>
+
+            <div class="stack-links">
+              <div class="stack-links-inner">
+                <p>Stack:</p>
+                <p><i class="fab fa-html5"></i></p>
+                <p><i class="fab fa-python"></i></p>
+                <p><i class="fas fa-database"></i>SQLite</p>
+              </div>
+              <div style="border-top: 1px solid rgba(183, 183, 183, 0.3)"></div>
+              <div class="stack-links-inner">
+                <a><i class="fas fa-globe-americas"></i>Project</a>
+                <a><i class="fab fa-github"></i>Github Repo</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
     </div>
+
     <div class="table-section">
       <h3>Here are some more projects to checkout</h3>
       <table>
@@ -172,6 +234,7 @@
       </table>
     </div>
   </body>
-
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="script.js"></script>
+  <script src="header.js"></script>
 </html>
