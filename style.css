@@ -15,8 +15,6 @@ canvas {
 nav {
   color: white;
   height: 80px;
-  /* line-height: 80px
-  box-shadow: 1px 1px 1px rgba(0, 0,0, 0.2) */
   position: fixed;
   top: 0;
   left: 0;
@@ -43,20 +41,19 @@ i {
 
 a,
 a:visited {
-  /* margin: 0px 24px; */
   color: white;
   text-decoration: none;
   border-radius: 6px;
 }
 
-.title {
+/* .title {
   margin-right: auto;
   margin-bottom: 2rem;
   border: 3px blue solid;
-}
+} */
 
 .navbar-brand:hover {
-  color: blue;
+  color: rgba(120, 120, 252, 0.8);
   text-decoration: none;
 }
 
@@ -154,7 +151,7 @@ a:visited {
   flex-direction: column;
   text-align: center;
   align-items: center;
-  padding: 6rem 0rem 2rem 0rem;
+  padding: 5rem 0rem 2rem 0rem;
 }
 
 .project-card {
@@ -389,7 +386,7 @@ img {
 }
 
 .bounce:hover {
-  color: rgba(0, 0, 255, 1);
+  color: rgba(120, 120, 252, 0.8);
 }
 
 @keyframes bounce {
@@ -411,37 +408,32 @@ img {
 .projects-table {
   border-collapse: collapse;
   margin: 25px 0;
-  font-size: 0.9em;
-  font-family: sans-serif;
+  font-size: 1em;
   min-width: 400px;
+  text-align: left;
+  width: 80%;
+  color: #ffffff;
+  border-radius: 12px;
   background-color: rgba(240, 238, 255, 0.1);
   box-shadow: 0 0 20px rgba(68, 68, 68, 0.3);
 }
 
 .projects-table thead tr {
   background-color: rgba(240, 238, 255, 0.1);
-  color: #ffffff;
-  text-align: left;
 }
 
-.projects-table th,
-.projects-table td {
+.projects-table th {
   padding: 12px 15px;
+  font-weight: normal;
+  font-size: large;
 }
 
-.projects-table tbody tr {
-  border-bottom: 1px solid #dddddd;
+.projects-table tbody tr > td {
+  border-top: thin solid #4a4e4e;
+  padding: 1rem;
+  font-weight: normal;
 }
 
-.projects-table tbody tr:nth-of-type(even) {
-  background-color: #f3f3f3;
-}
-
-.projects-table tbody tr:last-of-type {
-  border-bottom: 2px solid #009879;
-}
-
-.projects-table tbody tr.active-row {
-  font-weight: bold;
-  color: #009879;
+.projects-table tbody tr:hover {
+  background-color: #4e4f54;
 }
