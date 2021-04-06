@@ -19,12 +19,34 @@
       <div class="navbar-nav">
         <a class="nav-item nav-link" href="/bio.html" id="nav-bio">Bio</a>
         <a class="nav-item nav-link" href="/projects.html">Projects</a>
-        <a class="nav-item nav-link" href="mailto:minutti70@gmail.com"
+        <a
+          id="contact-btn"
+          class="nav-item nav-link"
+          href="mailto:minutti70@gmail.com"
           >Contact</a
         >
       </div>
     </div>
   </nav>
+  <!-- CONTACT MODAL -->
+  <!-- DEFAULT DISPLAY NONE -->
+  <div id="contact-modal" class="modal fade-in">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h4>Contact Me</h4>
+      <p>
+        The link should have opened up your default email client in case it
+        didn't ...
+      </p>
+      <br />
+      <p>Email: minutti70@gmail.com</p>
+      <p>LinkedIn: https://www.linkedin.com/in/kevin-minutti/</p>
+      <p>
+        Please feel free to reach out or connect I'm happy to start a
+        conversation.
+      </p>
+    </div>
+  </div>
   <body>
     <div class="bio-container">
       <div class="row">
@@ -57,4 +79,6 @@
       </div>
     </div>
   </body>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="header.js"></script>
 </html>
