@@ -35,7 +35,6 @@ i {
   margin-right: 4px;
 }
 #logo-a {
-  box-shadow: 0px 0px 0px 2px white inset;
   padding: 0px 10px;
 }
 
@@ -46,12 +45,6 @@ a:visited {
   border-radius: 6px;
 }
 
-/* .title {
-  margin-right: auto;
-  margin-bottom: 2rem;
-  border: 3px blue solid;
-} */
-
 .navbar-brand:hover {
   color: rgba(120, 120, 252, 0.8);
   text-decoration: none;
@@ -59,10 +52,12 @@ a:visited {
 
 .nav-item {
   margin: 0px 24px;
+  transition: box-shadow 0.18s ease-in;
 }
 .nav-item:hover {
   color: slategray;
   text-decoration: none;
+  box-shadow: 0px 0px 0px 2px slategray inset;
 }
 
 #center-text {
@@ -78,17 +73,8 @@ a:visited {
   text-align: center;
 }
 
-#nav-bio {
+.selected {
   box-shadow: 0px 0px 0px 2px white inset;
-}
-#nav-bio:hover {
-  box-shadow: 0px 0px 0px 2px slategray inset;
-}
-#nav-proj {
-  box-shadow: 0px 0px 0px 2px white inset;
-}
-#nav-proj:hover {
-  box-shadow: 0px 0px 0px 2px slategray inset;
 }
 
 #bio-image {
