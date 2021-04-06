@@ -10,24 +10,46 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Kevin Minutti</title>
   </head>
-  <nav class="navbar fixed-top navbar-expand-lg">
+  <nav class="navbar fixed-top navbar-expand-md">
     <a id="logo-a" class="navbar-brand selected" href=""
       ><strong id="logo">KM</strong></a
     >
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-item nav-link" href="/bio.html">Bio</a>
-        <a class="nav-item nav-link" href="/projects.html">Projects</a>
-        <a
-          id="contact-btn"
-          class="nav-item nav-link"
-          href="mailto:minutti70@gmail.com"
-          >Contact</a
-        >
-      </div>
+    <button
+      type="button"
+      class="navbar-toggler"
+      data-toggle="collapse"
+      data-target="#navbarMenu"
+      aria-controls="navbarMenu"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+      style="color: white; outline: none"
+    >
+      <i class="fas fa-bars" style="margin: 0"></i>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarMenu">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/bio.html">Bio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/projects.html">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a id="contact-btn" class="nav-link" href="mailto:minutti70@gmail.com"
+            >Contact</a
+          >
+        </li>
+      </ul>
     </div>
   </nav>
   <body>
@@ -46,7 +68,7 @@
         <span class="close">&times;</span>
         <h4>Contact Me</h4>
         <p>
-          The link should have opened up your default email client in case it
+          The link should have opened up your default email client. In case it
           didn't ...
         </p>
         <br />
@@ -307,6 +329,16 @@
         }
     </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
     <script src="header.js"></script>
   </body>
 </html>

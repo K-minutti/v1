@@ -14,6 +14,7 @@ canvas {
 }
 nav {
   color: white;
+  background-color: black;
   height: 80px;
   position: fixed;
   top: 0;
@@ -38,6 +39,10 @@ i {
   padding: 0px 10px;
 }
 
+#logo-a:hover {
+  box-shadow: 0px 0px 0px 2px rgba(120, 120, 252, 0.8) inset;
+}
+
 a,
 a:visited {
   color: white;
@@ -50,13 +55,21 @@ a:visited {
   text-decoration: none;
 }
 
+.nav-link:hover {
+  color: slategrey;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
 .nav-item {
   margin: 0px 24px;
+  background-color: black;
   transition: box-shadow 0.18s ease-in;
 }
 .nav-item:hover {
   color: slategray;
   text-decoration: none;
+  border-radius: 6px;
   box-shadow: 0px 0px 0px 2px slategray inset;
 }
 
@@ -65,6 +78,8 @@ a:visited {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.2), 0px 8px 13px rgba(0, 0, 0, 0.2),
+    0px 18px 23px rgba(0, 0, 0, 0.2);
 }
 
 .center-div {
@@ -77,35 +92,11 @@ a:visited {
   box-shadow: 0px 0px 0px 2px white inset;
 }
 
-#bio-image {
-  width: 150px;
-  height: 150px;
-  border-radius: 20%;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  background-image: url("./assets/bio.jpeg");
+.selected:hover {
+  box-shadow: 0px 0px 0px 2px slategrey inset;
 }
 
-#bio-text-container {
-  display: flex;
-  flex-direction: column;
-  width: 60%;
-  text-align: center;
-  align-items: center;
-  padding-left: 4rem;
-  padding-right: 4rem;
-  padding-top: 4rem;
-}
-
-#bio-image-container {
-  width: 40%;
-  display: flex;
-  padding-top: 10rem;
-  flex-direction: column;
-  text-align: center;
-  align-items: center;
-}
+/* BIO PAGE */
 .bio-container {
   position: absolute;
   top: 50%;
@@ -113,7 +104,37 @@ a:visited {
   width: 100%;
   transform: translate(-50%, -50%);
   padding: 20px 24px;
-  border: 2px dotted green;
+}
+
+.title {
+  margin-right: auto;
+  margin-bottom: 1rem;
+}
+#bio-text-container {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  text-align: left;
+  align-items: center;
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+#bio-image {
+  width: 180px;
+  height: 180px;
+  border-radius: 18%;
+  margin: auto;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-image: url("./assets/bio.jpeg");
+}
+
+#bio-image-container {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
 }
 
 .row {
@@ -129,6 +150,12 @@ a:visited {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.banner > h1,
+.banner > a {
+  text-shadow: 0px 4px 3px rgba(68, 68, 68, 0.2),
+    0px 8px 13px rgba(68, 68, 68, 0.2), 0px 18px 23px rgba(68, 68, 68, 0.2);
 }
 
 .projects-container {
@@ -460,3 +487,14 @@ img {
   text-decoration: none;
   cursor: pointer;
 }
+
+/* MEDIA QUERIES */
+/* Less than 980px we will produce the hamberger menu */
+/* @media all and (max-width:980) {
+
+} */
+
+/* Less than 900px we will make everthing stacked */
+/* .navbar-nav {
+  border-bottom: 1px solid #4a4e4e;
+} */
