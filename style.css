@@ -553,6 +553,12 @@ img {
     margin: 0;
   }
 
+  .dot-container {
+    position: absolute;
+    bottom: -10%;
+    width: 100%;
+  }
+
   .project-desc {
     background-color: rgba(0, 0, 0, 0);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0);
