@@ -307,7 +307,7 @@ img {
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover,
 .next:hover {
-  background-color: rgba(183, 183, 183, 0.3);
+  background-color: rgba(78, 79, 84, 0.7);
 }
 
 /* The dots/bullets/indicators */
@@ -490,11 +490,90 @@ img {
 
 /* MEDIA QUERIES */
 /* Less than 980px we will produce the hamberger menu */
-/* @media all and (max-width:980) {
+@media all and (max-width: 760px) {
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 100;
+    margin-top: 160px;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    color: white;
+  }
 
-} */
+  .row {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
 
-/* Less than 900px we will make everthing stacked */
-/* .navbar-nav {
-  border-bottom: 1px solid #4a4e4e;
-} */
+  #bio-text-container,
+  #bio-image-container {
+    width: 100%;
+    padding: 0px 24px;
+  }
+
+  .bio-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+  }
+}
+
+@media all and (max-width: 720px) {
+  .projects-container {
+    width: 100%;
+  }
+  div > .project-card {
+    width: 100%;
+    display: flex;
+    height: 540px;
+    flex-direction: column;
+    background-color: rgba(240, 238, 255, 0.1);
+    box-shadow: 0 0 20px rgba(68, 68, 68, 0.2);
+  }
+
+  .project-image-container,
+  .project-desc-container {
+    width: 100%;
+    height: 50%;
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+
+  .image-container-left,
+  .image-container-right {
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .project-desc {
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0);
+  }
+
+  .project-title-container > h4 {
+    font-size: 18px;
+  }
+  .project-main-text {
+    font-size: 14px;
+    border-bottom: 1px solid rgba(183, 183, 183, 0.3);
+  }
+
+  .stack-links {
+    font-size: 14px;
+  }
+
+  .projects-table th {
+    font-size: 14px;
+  }
+  .projects-table {
+    font-size: 12px;
+  }
+}
