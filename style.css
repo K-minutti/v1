@@ -271,6 +271,7 @@ img {
 }
 .stack-links-inner > a:hover {
   background-color: rgba(183, 183, 183, 0.3);
+  cursor: pointer;
 }
 
 .image-changers {
