@@ -104,7 +104,7 @@ var uniforms = {
 };
 
 var speed = Math.random(18);
-var speedRandom = speed > 0.3 ? speed / 10000 : 0.3 / 10000;
+var speedRandom = speed > 0.35 ? speed / 10000 : 0.35 / 10000;
 
 var options = {
   perlin: {
