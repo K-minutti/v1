@@ -21,8 +21,8 @@ export default function Home() {
         <div className={styles.center}>
               <Image
                 className={styles.portrait}
-                src="/../public/portrait.png"
-                alt="portrait"
+                src="https://raw.githubusercontent.com/K-minutti/v1/main/public/portrait.png" 
+                alt="portrait of a frustrated programmer"
                 width={360}
                 height={225}
                 priority
@@ -37,18 +37,18 @@ export default function Home() {
 
           <div className={styles.grid}>
             <a
-              href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+              href="https://github.com/K-minutti"
               className={styles.card}
               target="_blank"
               rel="noopener noreferrer"
             >
               <p className={inter.className}>
-                <code>What I'm up to </code><span>-&gt;</span>
+                <code>What I&apos;m up to </code><span>-&gt;</span>
               </p>
             </a>
 
             <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+              href="https://k-minutti.github.io/blog/"
               className={styles.card}
               target="_blank"
               rel="noopener noreferrer"
@@ -60,10 +60,8 @@ export default function Home() {
             </a>
 
             <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+              href="/reading"
               className={styles.card}
-              target="_blank"
-              rel="noopener noreferrer"
             >
               <p className={inter.className}>
               <code>Reading list </code><span>-&gt;</span>
