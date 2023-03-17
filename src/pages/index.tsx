@@ -1,9 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
-
-const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
@@ -15,25 +12,19 @@ export default function Home() {
         <link rel="icon" href="favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <div className={styles.center}>
-              <code className={styles.code}>Kevin Minutti</code>
-        </div>
-        <div className={styles.center}>
-              <Image
+
+         <Image
                 className={styles.portrait}
                 src="https://raw.githubusercontent.com/K-minutti/v1/main/public/portrait.png" 
                 alt="portrait of a frustrated programmer"
-                width={360}
-                height={225}
+                width={216}
+                height={200}
                 priority
               />
-        </div>
-        <div className={styles.center}>
-          <div className={styles.description}>
-          <code>I like to code mostly in Python, Go, TypeScript and C++.</code>
+  
 
-          </div>
-        </div>
+        <p className={styles.title}>Kevin Minutti</p>
+        <p className={styles.description}>I like to code mostly in Python, Go, and TypeScript.</p>
 
           <div className={styles.grid}>
             <a
@@ -42,31 +33,24 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <p className={inter.className}>
-                <code>What I&apos;m up to </code><span>-&gt;</span>
-              </p>
-            </a>
-
-            <a
-              href="https://k-minutti.github.io/blog/"
-              className={styles.card}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <p className={inter.className}>
-                
-                <code>My writing </code><span>-&gt;</span>
-              </p>
+              <p >What I&apos;m up to <span>&rarr;</span></p>
             </a>
 
             <a
               href="/reading"
               className={styles.card}
             >
-              <p className={inter.className}>
-              <code>Reading list </code><span>-&gt;</span>
-              </p>
+              <p >Reading <span>&rarr;</span></p>
             </a>
+
+            <a
+              href="/blog"
+              className={styles.card}
+            >
+              <p >Writing <span>&rarr;</span></p>
+            </a>
+
+
           </div>
       </main>
     </>
