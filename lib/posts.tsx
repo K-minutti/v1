@@ -8,6 +8,14 @@ import html from 'remark-html';
 
 const postsDirectory = path.join(process.cwd(), 'posts');
 
+export interface Post {
+  id: string
+  date: string
+  title: string
+}
+
+export interface Posts extends Array<Post> { }
+
 export function getSortedPostsData() {
   // Get file names under /posts
   const fileNames = fs.readdirSync(postsDirectory);
@@ -22,11 +30,19 @@ export function getSortedPostsData() {
     const matterResult = matter(fileContents);
 
     // Combine the data with the id
-    return {
+    // return {
+    //   id,
+    //   ...matterResult.data,
+    // };
+    let post: Post  = {
       id,
-      ...matterResult.data,
-    };
+      date: matterResult.data.date,
+      title: matterResult.data.title,
+    }
+    return post
   });
+
+
   // Sort posts by date
   return allPostsData.sort((a, b) => {
     if (a.date < b.date) {
@@ -64,7 +80,7 @@ export function getAllPostIds() {
 }
 
 
-export async function getPostData(id) {
+export async function getPostData(id: string) {
   const fullPath = path.join(postsDirectory, `${id}.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
 

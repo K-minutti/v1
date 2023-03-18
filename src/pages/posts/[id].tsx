@@ -2,7 +2,7 @@ import { getAllPostIds, getPostData } from '../../../lib/posts';
 import Date from '../../../components/date';
 import Head from 'next/head';
 
-export async function getStaticProps({ params }) {
+export async function getStaticProps({ params }: any) {
     // Add the "await" keyword like this:
     const postData = await getPostData(params.id);
   
@@ -22,7 +22,7 @@ export async function getStaticPaths() {
 }
 
 
-export default function Post({ postData }) {
+export default function Post({postData}: any) {
     return (
       <div>
         <Head>

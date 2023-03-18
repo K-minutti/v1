@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Link from 'next/link';
 import Date from '../../components/date';
 import styles from '@/styles/blog.module.css'
-import { getSortedPostsData } from '../../lib/posts';
+import { getSortedPostsData, Posts } from '../../lib/posts';
 
 export async function getStaticProps() {
     const allPostsData = getSortedPostsData();
@@ -13,7 +13,13 @@ export async function getStaticProps() {
     };
   }
 
-export default function Blog({ allPostsData }) {
+interface AllPosts {
+    allPostsData: Posts
+}
+
+export default function Blog(props: AllPosts) {
+  const {allPostsData} = props
+
     return (
         <>
           <Head>
