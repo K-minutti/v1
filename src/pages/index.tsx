@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link';
 import Image from 'next/image'
 import styles from '@/styles/Home.module.css'
 
@@ -27,28 +28,28 @@ export default function Home() {
         <p className={styles.description}>I like to code mostly in Python, Go, and TypeScript.</p>
 
           <div className={styles.grid}>
-            <a
+            <Link
               href="https://github.com/K-minutti"
               className={styles.card}
               target="_blank"
               rel="noopener noreferrer"
             >
               <p >What I&apos;m up to <span>&rarr;</span></p>
-            </a>
+            </Link>
 
-            <a
+            <Link
               href="/reading"
               className={styles.card}
             >
               <p >Reading <span>&rarr;</span></p>
-            </a>
+            </Link>
 
-            <a
+            <Link
               href="/blog"
               className={styles.card}
             >
               <p >Writing <span>&rarr;</span></p>
-            </a>
+            </Link>
 
 
           </div>
