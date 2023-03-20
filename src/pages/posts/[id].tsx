@@ -1,5 +1,6 @@
 import { getAllPostIds, getPostData } from '../../../lib/posts';
 import Date from '../../../components/date';
+import styles from '@/styles/post.module.css'
 import Head from 'next/head';
 
 export async function getStaticProps({ params }: any) {
@@ -29,12 +30,16 @@ export default function Post({postData}: any) {
         <title>{postData.title}</title>
         </Head>
         <br />
-        <article>
+        <article className={styles.article}>
+        <div className={styles.header}>
         <h1 >{postData.title}</h1>
+        </div>
         <div>
           <Date dateString={postData.date} />
         </div>
-        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        <section className={styles.body}>
+        <div className={styles.content} dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        </section>
       </article>
       </div>
     );
