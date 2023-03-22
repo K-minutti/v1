@@ -7,35 +7,37 @@ date: '2021-02-18'
 If you're new to making apps for the web and wondering what is client-side rendering and server-side rendering and the differences between the two then this article is right for you.
 Before we begin it's important to remember that in the past the internet consisted of mostly static websites and multi page apps that rendered HTML, CSS, and Javascript mainly on the server. For a long time this was okay, in part because users expected static web pages and general network connectivity was not as performant as it is today. Web-page interactivity was low as websites were mostly used for displaying content. This meant that the mostly server-side rendered internet was doing just fine. This changed as the development of modern browsers progressed as it increased the capabilities of what could be executed by a browser client. New Javascript runtimes, frameworks and updated web standards enabled developers to create apps on the internet that rivaled apps on native platforms. This led to the rise of single page apps (SPAs) for the primary method to deliver highly interactive web applications. SPAs are great and truly offer a native feel, with fast responsiveness, the ability to cache effectively, and can be easier to debug.
 
-Differences between SSR and CSR
-SSR
+## Differences between SSR and CSR
+
+### SSR
 During server-side rendering a server builds a web page including the HTML, CSS, and content usually without the accompanying JavaScript. Today, JavaScript files tend to be large and usually include the use of frameworks/libraries therefore it takes some time to execute these files. In the meantime, the server is working in the background and will send over the JavaScript and related data to the client once it's ready. This means that users get a lightning fast view of a webpage, but it's not interactive until the javascript executables have been received.
 
-Highlights
-Initial page load is faster than most client-side render apps especially on older hardware, and when users have a poor/low speed internet connection.
-Common UI flickers that happen with CSR apps doesn't happen as often with SSR
-Great for SEO as content is ready to go for search engine crawlers. It offers easier SEO management as well. Think: adding meta tags, or a keyword on every page.
-Server-side rendering works great with text-based sites.
+### Highlights
+- Initial page load is faster than most client-side render apps especially on older hardware, and when users have a poor/low speed internet connection.
+- Common UI flickers that happen with CSR apps doesn't happen as often with SSR
+- Great for SEO as content is ready to go for search engine crawlers. It offers easier SEO management as well. Think: adding meta tags, or a keyword on every page.
+- Server-side rendering works great with text-based sites.
 
-Use cases
-Simple sites for displaying static content
-Apps with small javascript files
-Handling initial render when a user (or search engine crawler) makes the first request to your app.
-Rendering a homepage or index page that displays a visual map or collection of different routes a user can take on the app. Think: college portal displaying options to go to admissions, grades, housing, meal plans, etc.
+### Use cases
+- Simple sites for displaying static content
+- Apps with small javascript files
+- Handling initial render when a user (or search engine crawler) makes the first request to your app.
+- Rendering a homepage or index page that displays a visual map or collection of different routes a user can take on the app. Think: college portal displaying options to go to admissions, grades, housing, meal plans, etc.
 
-CSR
+### CSR
 When a client makes a request to an app that uses client-side rendering they receive a response consisting of a plain old HTML file with minimal content. Included in this HTML file is usually a bundle which contains all of the assets, related data, and JavaScript files that make a web page viewable and interactive. The client browser will do all the hard work in the background making requests to load all the necessary data and run the files that will render the initial view and make the app interactive.
 
-Highlights
-Fast website rendering after initial load
-Rich site interactions
-Can use caching effectively
-Robust selection of js libraries
-Overall great for providing users a native feel on a web app
-Use cases
-Initial iteration of project. CSR usually allows for fast development, and easier debugging
-You intend to make a mobile app or progressive web app version from this CSR web app
-Server resources are scarce due to lack of funds or inability to scale
+### Highlights
+- Fast website rendering after initial load
+- Rich site interactions
+- Can use caching effectively
+- Robust selection of js libraries
+- Overall great for providing users a native feel on a web app
 
-Trade Offs
+### Use cases
+- Initial iteration of project. CSR usually allows for fast development, and easier debugging
+- You intend to make a mobile app or progressive web app version from this CSR web app
+- Server resources are scarce due to lack of funds or inability to scale
+
+### Trade Offs
 Using only server-side rendering or client-side rendering you are faced with a few downsides. Server side rendered apps have fast initial renders but a page isn't interactive until after the JavaScript or JSX is done executing. If your site is very interactive frequent server requests can produce bottlenecks and tend to be costly as your server is doing a lot of work. When it comes to client side rendering the initial load of a webpage will usually require more time to load and can be quite cumbersome on mobiles. Client-side rendering also tends to make more use of external libraries which may not be best for security, or scaling. The best thing to do is ensure your app is up and working so if you must use a client-side rendering framework stick to CSR. If you're creating a site to display content then server-side rendering should be your go to option. Now, if you need to use both that is possible with certain frameworks but that is a topic for another post. Hopefully this helped in understanding client-side and server-side rendering.
