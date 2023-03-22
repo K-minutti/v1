@@ -25,7 +25,7 @@ export default function Home() {
   
 
         <p className={styles.title}>Kevin Minutti</p>
-        <p className={styles.description}>I like to code mostly in Python, Go, and TypeScript.</p>
+        <p className={styles.description}>Solving problems and having fun.</p>
 
           <div className={styles.grid}>
             <Link
