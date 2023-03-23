@@ -1,5 +1,23 @@
 import Head from 'next/head'
-import styles from '@/styles/Home.module.css'
+
+const readingList = [
+    {
+      date: "01.02.23",
+      book: "A Mind for Numbers",
+      author: "Barbara Oakley"
+    }, 
+    {
+      date: "01.09.23 ",
+      book: "Hackers",
+      author: "Steven Levy"
+    }, 
+    {
+      date: "01.23.23",
+      book: "Siddhartha",
+      author: "Hermann Hesse"
+    }, 
+    
+]
 
 export default function ReadingList() {
     return (
@@ -11,11 +29,15 @@ export default function ReadingList() {
             <link rel="icon" href="favicon.ico" />
           </Head>
           <main>
-            <p><big>Reading List</big></p>
-            <div>
-            <p><span>01.02.23    | </span>A Mind for Numbers - Barbara Oakley</p>
-            <p><span>01.09.23    | </span>Hackers - Steven Levy</p>
-            <p><span>01.16.23   | </span>Previous Week Continued</p>
+            <h1>Reading List</h1>
+            <div> 
+              <ul className="list">
+              {readingList.map(({ date, book, author }) => (
+                  <li className="listItem" key={date}>
+                      <p><span>{date}</span> | {book} - {author}</p>
+                  </li>
+            ))}
+            </ul>
             </div>
          </main>
     </>
