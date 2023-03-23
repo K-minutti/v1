@@ -13,7 +13,6 @@ export default function Home() {
         <link rel="icon" href="favicon.ico" />
       </Head>
       <main className={styles.main}>
-
          <Image
                 className={styles.portrait}
                 src="https://raw.githubusercontent.com/K-minutti/v1/main/public/portrait.png" 
@@ -23,8 +22,7 @@ export default function Home() {
                 priority
               />
   
-
-        <p className={styles.title}>Kevin Minutti</p>
+        <h1 className={styles.title}>Kevin Minutti</h1>
         <p className={styles.description}>Solving problems and having fun.</p>
 
           <div className={styles.grid}>
