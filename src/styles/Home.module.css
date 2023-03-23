@@ -10,9 +10,7 @@
   border-radius: 50%;
 }
 
-
 .title {
-  margin: 0;
   font-size: 1.8rem;
   line-height: 1.5;
   margin: 1.8rem 0 0 0; 
@@ -70,23 +68,6 @@
   line-height: 1.5;
   max-width: 30ch;
   font-family: var(--font-mono);
-}
-
-
-.footer {
-  display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
 }
 
 .code {
