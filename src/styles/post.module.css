@@ -11,3 +11,20 @@
     margin-bottom: 3rem;
 }
 
+.article .body {
+    color:  #CCCCCC;
+}
+
+
+.article ul {
+    padding-left: 1.6rem;
+    margin: 0;
+}
+
+
+/* Mobile */
+@media (max-width: 700px) {
+    .content {
+        padding: 4rem;
+    }
+}

@@ -43,9 +43,9 @@ export default function Post({postData}: any) {
         <article className={styles.article}>
           <div className={styles.header}>
           <h1 >{postData.title}</h1>
-          </div>
           <div>
             <Date dateString={postData.date} />
+          </div>
           </div>
           <section className={styles.body}>
           <MDXRemote {...postData.source} components={components} />

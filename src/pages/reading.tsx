@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import styles from '@/styles/Home.module.css'
 
 const readingList = [
     {
@@ -28,7 +29,7 @@ export default function ReadingList() {
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <link rel="icon" href="favicon.ico" />
           </Head>
-          <main>
+          <main  className={styles.main}>
             <h1>Reading List</h1>
             <div> 
               <ul className="list">
