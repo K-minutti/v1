@@ -1,7 +1,7 @@
 import { getAllPostIds, getPostData } from '../../../lib/posts';
 import { GetStaticProps } from 'next';
 import Date from '../../../components/date';
-import styles from '@/styles/post.module.css'
+import styles from '@/styles/post.module.scss'
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
