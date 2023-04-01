@@ -2,6 +2,7 @@ import { getAllPostIds, getPostData } from '../../../lib/posts';
 import { GetStaticProps } from 'next';
 import Date from '../../../components/date';
 import styles from '@/styles/post.module.scss'
+import Header from '../../components/header'
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -39,6 +40,7 @@ export default function Post({postData}: any) {
         <Head>
         <title>{postData.title}</title>
         </Head>
+        <Header/>
         <br />
         <article className={styles.article}>
           <div className={styles.header}>

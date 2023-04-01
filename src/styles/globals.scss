@@ -1,22 +1,57 @@
+@charset "utf-8";
+
+// Define defaults for each variable.
+
+// Prefers light
+$base-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$base-font-size:   16px !default;
+$base-font-weight: 400 !default;
+$small-font-size:  $base-font-size * 0.875 !default;
+$base-line-height: 1.5 !default;
+
+$spacing-unit:     30px !default;
+
+
+$text-color:       #111 !default;
+$background-color: #fdfdfd !default;
+//$brand-color:      #2a7ae2 !default;
+
+$grey-color:       #828282 !default;
+$grey-color-light: lighten($grey-color, 40%) !default;
+$grey-color-dark:  darken($grey-color, 25%) !default;
+
+$table-text-align: left !default;
+
+$max-width: 1100px;
+$border-radius: 12px;
+
+$dark-text-color: #fafafa !default;
+
+
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
   --font-mono: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
 
   --background-rgb: 255, 255, 255;
-
   --callout-rgb: 238, 240, 241;
   --callout-border-rgb: 172, 175, 176;
   --card-rgb: 180, 185, 188;
   --card-border-rgb: 131, 134, 135;
 
+  --brand-color: #d2a8ff;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
+    //--background-color: #fdfdfd;
+    --brand-color: #d2a8ff;
+
+    // next styles
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
+    --border-radius: 12px;
 
     --callout-rgb: 20, 20, 20;
     --callout-border-rgb: 108, 108, 108;
@@ -47,236 +82,52 @@
   }
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
+// Width of the content area
+$content-width:    800px !default;
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-  font-family: var(--font-mono);
-}
-
-body {
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-h1 {
-  font-size: 1.875rem; /* 30px */
-  line-height: 2.25rem; /* 36px */
-  font-weight: 800;
-  letter-spacing: -0.05rem;
-  margin: 1rem 0;
-}
-
-h1 .xl {
-  font-size: 2.5rem;
-  line-height: 1.2;
-  font-weight: 800;
-  letter-spacing: -0.05rem;
-  margin: 1rem 0;
-}
-
-h2 {
-	font-size: 1.5rem; /* 24px */
-  line-height: 2rem; /* 32px */
-  margin: 1rem 0;
-}
-
-h3 {
-  font-size: 1.2rem;
-  line-height: 1.5; 
-  margin: .8rem 0;
-}
-
-.list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-  
-.listItem {
-    margin: 0 0 1.25rem;
-}
-
-.lightText {
-  color: #666;
-}
-
-p {
-  margin-bottom: 1rem; /* 16px */
-}
-
-a {
-  text-decoration: none;
-}
+$on-palm:          600px !default;
+$on-laptop:        800px !default;
 
 
-img {
-  max-width: 100%;
-  display: block;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+// Use media queries like this:
+// @include media-query($on-palm) {
+//   .wrapper {
+//     padding-right: $spacing-unit / 2;
+//     padding-left: $spacing-unit / 2;
+//   }
+// }
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
   }
 }
 
-/* post code block */
-
-code[class*='language-'],
-pre[class*='language-'] {
-    color: var(--primary-color);
-    background: none;
-    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-    font-size: 1rem;
-    text-align: left;
-    white-space: pre;
-    word-spacing: normal;
-    word-break: normal;
-    word-wrap: normal;
-    line-height: 1.5;
-
-    -moz-tab-size: 4;
-    -o-tab-size: 4;
-    tab-size: 4;
-
-    -webkit-hyphens: none;
-    -moz-hyphens: none;
-    -ms-hyphens: none;
-    hyphens: none;
-}
-
-/* Code blocks */
-pre[class*='language-'] {
-    padding: 1em;
-    margin: 0.5em 0;
-    overflow: auto;
-    border-radius: 1em;
-    border-color:  #d1d5db;
-    border-width: 1px 1px 0;
-}
-
-:not(pre) > code[class*='language-'],
-pre[class*='language-'] {
-  /* border-color: #374151;  */
-  border-color:  #d1d5db;
-  border-width: 1px 1px 0;
-  background-color: rgb(17 24 39);
-  box-sizing: border-box;
-  /* --tw-prose-th-borders: #d1d5db;
-  --tw-prose-td-borders: #e5e7eb; */
+@mixin relative-font-size($ratio) {
+  font-size: $base-font-size * $ratio;
 }
 
 
-/* Inline code */
-:not(pre) > code[class*='language-'] {
-    padding: 0.3em;
-    /* font-size: 0.9rem; */
-    border-radius: 0.4em;
-    white-space: normal;
-}
-
-.token.comment,
-.token.prolog,
-.token.doctype,
-.token.cdata {
-    color: var(--code-block-comment);
-}
-
-.token.punctuation {
-    color: var(--primary-color);
-}
-
-.token.namespace {
-    opacity: 0.7;
-}
-
-.token.property,
-.token.tag,
-.token.constant,
-.token.symbol,
-.token.deleted {
-    color: var(--code-block-var);
-}
-
-.token.boolean,
-.token.number {
-    color: var(--code-block-num);
-}
-
-.token.selector,
-.token.attr-name,
-.token.string,
-.token.char,
-.token.builtin,
-.token.inserted {
-    color: var(--code-block-fun);
-}
-
-.token.operator,
-.token.entity,
-.token.url,
-.language-css .token.string,
-.style .token.string,
-.token.variable {
-    color: var(--primary-color);
-}
-
-.token.atrule,
-.token.attr-value,
-.token.function,
-.token.class-name {
-    color: var(--code-block-fun);
-}
-
-.token.keyword {
-    color: var(--code-block-keyword);
-}
-
-.token.regex,
-.token.important {
-    color: var(--code-block-tkimp);
-}
-
-.token.important,
-.token.bold {
-    font-weight: bold;
-}
-.token.italic {
-    font-style: italic;
-}
-
-.token.entity {
-    cursor: help;
+@media (prefers-color-scheme: dark) {
+    html {
+      color-scheme: dark;
+    }
+    body {
+      background: linear-gradient(
+          to bottom,
+          transparent,
+          rgb(var(--background-end-rgb))
+        )
+        rgb(var(--background-start-rgb));
+    }
 }
 
 
-.rehype-code-title + pre {
-  margin-top: 0;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  color: rgb(229 231 235);
-}
 
-.rehype-code-title {
-  background-color: rgb(31 41 55);
-  color: rgb(229 231 235);
-  border-top-left-radius: 0.5rem;
-  border-top-right-radius: 0.5rem;
-  border-width: 1px 1px 0;
-  padding: 0.75rem 1.25rem;
-  font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
-  font-size: .875rem;
-  line-height: 1.25rem;
-  font-weight: 700;
-}
+
+@import
+"base",
+"layout",
+"syntax-highlighting",
+"home.module",
+"post.module"
+;
