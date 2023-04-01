@@ -1,5 +1,6 @@
 import Head from 'next/head'
-import styles from '@/styles/Home.module.scss'
+import Header from '../components/header'
+import styles from '@/styles/home.module.scss'
 
 const readingList = [
     {
@@ -29,8 +30,9 @@ export default function ReadingList() {
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <link rel="icon" href="favicon.ico" />
           </Head>
+          <Header/>
           <main  className={styles.main}>
-            <h1>Reading List</h1>
+            <h3>Reading List</h3>
             <div> 
               <ul className="list">
               {readingList.map(({ date, book, author }) => (
