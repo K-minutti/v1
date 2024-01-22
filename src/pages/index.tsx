@@ -23,7 +23,7 @@ export default function Home() {
               />
   
         <h1 className={styles.title}>Kevin Minutti</h1>
-        <p className={styles.description}>Solving problems and having fun.</p>
+        <p className={styles.description}>Solving problems and having fun. I like to code.</p>
 
           <div className={styles.grid}>
             <Link
@@ -36,7 +36,7 @@ export default function Home() {
             </Link>
 
             <Link
-              href="/blog"
+              href="https://medium.com/@kevminutti"
               className={styles.card}
             >
               <p >Writing <span>&rarr;</span></p>
