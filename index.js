@@ -20,7 +20,8 @@ function createWorld() {
   //---
   scene = new THREE.Scene();
   scene.fog = new THREE.Fog(0x000000, 5, 15);
-  scene.background = new THREE.Color(0x000000);
+  // scene.background = new THREE.Color(0x000000); 
+  // scene.background = new THREE.Color("rgba(255, 255, 255, 0)"); // "rgb(249, 250, 251)"
   //---
   camera = new THREE.PerspectiveCamera(35, _width / _height, 1, 1000);
   camera.position.set(0, 0, 10);
@@ -29,7 +30,18 @@ function createWorld() {
   renderer.setSize(_width, _height);
   renderer.shadowMap.enabled = true;
   //---
-  document.body.appendChild(renderer.domElement);
+  //document.body.appendChild(renderer.domElement);
+
+  const homeSection = document.getElementById("home");
+  homeSection.appendChild(renderer.domElement);
+  /*
+  // Select the element with id="home"
+const homeSection = document.getElementById("home");
+
+// Append the renderer's DOM element to the selected section
+homeSection.appendChild(renderer.domElement);
+  */
+  
   //---
   window.addEventListener("resize", onWindowResize, false);
 }
