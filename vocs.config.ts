@@ -2,7 +2,7 @@ import { defineConfig } from 'vocs'
 
 export default defineConfig({
   title: 'Kevin Minutti',
-  description: 'Software Engineer — Cloud Infrastructure, Python, AWS, Terraform',
+  description: 'AI/ML Software Engineer',
   logoUrl: '/favicon.ico',
   iconUrl: '/favicon.ico',
   blogDir: './pages/blog',
