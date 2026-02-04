@@ -1,0 +1,45 @@
+---
+layout: landing
+---
+
+import { HomePage } from 'vocs/components'
+
+<div className="landing-hero">
+  <HomePage.Root>
+    <HomePage.Logo />
+    <HomePage.Tagline>Kevin Minutti</HomePage.Tagline>
+    <HomePage.Description>
+      Software Engineer specializing in cloud infrastructure, automation, and scalable systems.
+      Building with Python, AWS, Terraform, and CI/CD.
+    </HomePage.Description>
+    <HomePage.Buttons>
+      <HomePage.Button href="/about" variant="accent">About Me</HomePage.Button>
+      <HomePage.Button href="/projects">Projects</HomePage.Button>
+      <HomePage.Button href="/blog">Blog</HomePage.Button>
+    </HomePage.Buttons>
+  </HomePage.Root>
+</div>
+
+<div className="landing-sections">
+
+## What I Do
+
+I design and build cloud infrastructure and automation tooling. My work focuses on
+creating reliable, scalable systems using modern DevOps practices and infrastructure as code.
+
+<div className="landing-grid">
+  <div className="landing-card">
+    <h3>Cloud Infrastructure</h3>
+    <p>Designing and managing cloud environments on AWS with a focus on reliability, security, and cost efficiency.</p>
+  </div>
+  <div className="landing-card">
+    <h3>Infrastructure as Code</h3>
+    <p>Building reproducible infrastructure with Terraform, enabling consistent deployments across environments.</p>
+  </div>
+  <div className="landing-card">
+    <h3>CI/CD & Automation</h3>
+    <p>Creating automated pipelines and tooling to streamline development workflows and deployments.</p>
+  </div>
+</div>
+
+</div>
