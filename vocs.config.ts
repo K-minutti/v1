@@ -7,8 +7,6 @@ export default defineConfig({
   iconUrl: '/favicon.ico',
   blogDir: './pages/blog',
   topNav: [
-    { text: 'About', link: '/about' },
-    { text: 'Projects', link: '/projects' },
     { text: 'Blog', link: '/blog' },
   ],
   socials: [
