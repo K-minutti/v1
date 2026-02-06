@@ -2,42 +2,58 @@
 layout: landing
 ---
 
-import { HomePage } from 'vocs/components'
-
-<div className="landing-hero">
-  <HomePage.Root>
-    <HomePage.Logo />
-    <HomePage.Tagline>Kevin Minutti</HomePage.Tagline>
-    <HomePage.Description>
-      Software Engineer specializing in cloud infrastructure, automation, and scalable systems.
-      Building with Python, AWS, Terraform, and CI/CD.
-    </HomePage.Description>
-    <HomePage.Buttons>
-      <HomePage.Button href="/blog" variant="accent">Blog</HomePage.Button>
-    </HomePage.Buttons>
-  </HomePage.Root>
+<div className="landing-name">
+  <h1>Kevin Minutti</h1>
 </div>
 
-<div className="landing-sections">
+<div className="landing-projects">
 
-## What I Do
+<a className="project-row" href="https://github.com/bulgogi-burrito/batuta" target="_blank" rel="noreferrer noopener">
+  <div className="project-row-text">
+    <h3>Batuta</h3>
+    <p>Infrastructure automation and cloud-native design patterns for scalable deployments.</p>
+  </div>
+  <span className="project-row-category">Infrastructure</span>
+</a>
 
-I design and build cloud infrastructure and automation tooling. My work focuses on
-creating reliable, scalable systems using modern DevOps practices and infrastructure as code.
+<div className="project-row">
+  <div className="project-row-text">
+    <h3>Social Graph</h3>
+    <p>Social network data structures and graph-based visualization.</p>
+  </div>
+  <span className="project-row-category">Data</span>
+</div>
 
-<div className="landing-grid">
-  <div className="landing-card">
-    <h3>Cloud Infrastructure</h3>
-    <p>Designing and managing cloud environments on AWS with a focus on reliability, security, and cost efficiency.</p>
+<div className="project-row">
+  <div className="project-row-text">
+    <h3>Aiki</h3>
+    <p>Solving real-world challenges through practical software engineering.</p>
   </div>
-  <div className="landing-card">
-    <h3>Infrastructure as Code</h3>
-    <p>Building reproducible infrastructure with Terraform, enabling consistent deployments across environments.</p>
+  <span className="project-row-category">Engineering</span>
+</div>
+
+<div className="project-row">
+  <div className="project-row-text">
+    <h3>Tech Cluster</h3>
+    <p>Clustering and orchestration tooling for distributed systems.</p>
   </div>
-  <div className="landing-card">
-    <h3>CI/CD & Automation</h3>
-    <p>Creating automated pipelines and tooling to streamline development workflows and deployments.</p>
+  <span className="project-row-category">Infrastructure</span>
+</div>
+
+<div className="project-row">
+  <div className="project-row-text">
+    <h3>MN</h3>
+    <p>A creative project bridging technology and design.</p>
   </div>
+  <span className="project-row-category">Design</span>
+</div>
+
+<div className="project-row">
+  <div className="project-row-text">
+    <h3>TTP</h3>
+    <p>Technical tooling and pipeline automation for development workflows.</p>
+  </div>
+  <span className="project-row-category">Automation</span>
 </div>
 
 </div>

@@ -1,60 +1,70 @@
 /* ===== Landing Page ===== */
 
-.landing-hero {
-  min-height: 60vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.landing-sections {
-  max-width: 900px;
+.landing-name {
+  padding: 4rem 1.5rem 2rem;
+  max-width: 700px;
   margin: 0 auto;
-  padding: 2rem 1.5rem 4rem;
 }
 
-.landing-sections h2 {
-  text-align: center;
-  margin-bottom: 2rem;
-  font-size: 1.75rem;
-}
-
-.landing-sections > p {
-  text-align: center;
-  max-width: 640px;
-  margin: 0 auto 3rem;
-  opacity: 0.85;
-  line-height: 1.7;
-}
-
-.landing-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  margin-top: 2rem;
-}
-
-.landing-card {
-  padding: 1.5rem;
-  border: 1px solid var(--vocs-color_border);
-  border-radius: 8px;
-  transition: border-color 0.2s ease;
-}
-
-.landing-card:hover {
-  border-color: var(--vocs-color_textAccent);
-}
-
-.landing-card h3 {
-  margin: 0 0 0.75rem;
-  font-size: 1.1rem;
-}
-
-.landing-card p {
+.landing-name h1 {
+  font-size: 2.25rem;
+  font-weight: 600;
   margin: 0;
-  font-size: 0.9rem;
-  opacity: 0.8;
-  line-height: 1.6;
+  letter-spacing: -0.02em;
+}
+
+.landing-projects {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 1.5rem 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.project-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--vocs-color_border);
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.15s ease;
+}
+
+.project-row:first-child {
+  border-top: 1px solid var(--vocs-color_border);
+}
+
+a.project-row:hover {
+  opacity: 0.7;
+}
+
+.project-row-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.project-row-text h3 {
+  margin: 0 0 0.25rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.project-row-text p {
+  margin: 0;
+  font-size: 0.875rem;
+  opacity: 0.6;
+  line-height: 1.5;
+}
+
+.project-row-category {
+  font-size: 0.8rem;
+  opacity: 0.4;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 /* ===== About Page ===== */
@@ -184,8 +194,9 @@
 /* ===== Responsive ===== */
 
 @media (max-width: 768px) {
-  .landing-grid {
-    grid-template-columns: 1fr;
+  .project-row {
+    flex-direction: column;
+    gap: 0.25rem;
   }
 
   .about-layout {
