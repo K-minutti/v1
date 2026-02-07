@@ -8,11 +8,10 @@
   },
   "scripts": {
     "dev": "vocs dev",
-    "build": "npx playwright install ; vocs build",
+    "build": "vocs build",
     "preview": "vocs preview"
   },
   "dependencies": {
-    "playwright": "^1.58.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "vocs": "^1.0.0"
