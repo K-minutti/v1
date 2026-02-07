@@ -38,14 +38,37 @@ RUN npx playwright install chromium
 COPY . .
 RUN npx vocs build
 
-# Stage 2: Serve with nginx
-FROM nginx:alpine
+# Stage 2: Serve with nginx (non-root)
+FROM nginx:stable-alpine
+
+# Remove default config
+RUN rm /etc/nginx/conf.d/default.conf
+
+# Add custom config that listens on 8080 (Digital Ocean App Platform default)
+COPY <<'EOF' /etc/nginx/conf.d/default.conf
+server {
+    listen 8080;
+    server_name _;
+    root /usr/share/nginx/html;
+    index index.html;
+
+    location / {
+        try_files $uri $uri/ $uri.html /index.html;
+    }
+}
+EOF
 
 COPY --from=build /app/dist /usr/share/nginx/html
 
-EXPOSE 8080
+# Run as non-root for security
+RUN chown -R nginx:nginx /usr/share/nginx/html \
+    && chown -R nginx:nginx /var/cache/nginx \
+    && chown -R nginx:nginx /var/log/nginx \
+    && touch /var/run/nginx.pid \
+    && chown nginx:nginx /var/run/nginx.pid
 
-# Digital Ocean App Platform expects the app to listen on port 8080
-RUN sed -i 's/listen\s*80;/listen 8080;/' /etc/nginx/conf.d/default.conf
+USER nginx
+
+EXPOSE 8080
 
 CMD ["nginx", "-g", "daemon off;"]
