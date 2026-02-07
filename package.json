@@ -8,7 +8,7 @@
   },
   "scripts": {
     "dev": "vocs dev",
-    "build": "vocs build",
+    "build": "npx playwright install ; vocs build",
     "preview": "vocs preview"
   },
   "dependencies": {
