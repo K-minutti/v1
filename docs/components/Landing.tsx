@@ -81,7 +81,7 @@ function DotField() {
     observer.observe(canvas)
     resize()
 
-    if (!reduceMotion) {
+    if (reduceMotion) {
       window.addEventListener('pointermove', onMove)
       document.addEventListener('pointerleave', onLeave)
       frame = requestAnimationFrame(loop)
